@@ -1,0 +1,645 @@
+/*basic configuration*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #eee;
+  background-color: #111;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 32px;
+}
+p {
+  font-size: 24px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > section {
+  padding: 50px;
+  padding-top: 150px;
+  max-width: 1300px;
+  width: 1000px;
+}
+
+/*setup for aside navigation*/
+.navigation {
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  padding: 0;
+  width: 0;
+  right: 0;
+  background-color: #222;
+  transition: all 0.2s ease-out;
+  padding: 20px 0;
+}
+#icon{
+  display: none;
+}
+.navigation.active{
+  box-sizing: border-box;
+  padding: 20px 50px;
+  width: 70%;
+}
+.navigation.active > ul{
+  margin-top: 50px;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+}
+.navigation.active > ul > li > a {
+  text-decoration: none;
+  color: #eee;
+  transition: .2s ease-in-out;
+}
+.navigation.active > ul > li > a:hover{
+  color: #ccc;
+  padding-left: 10px;
+}
+.cancel-navigation{
+  z-index: 1;
+  position: fixed;
+  height: 100%;
+  width: 0;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0);
+  transition: background-color .2s ease-in-out;
+}
+.cancel-navigation.active{
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/*navbar*/
+body > header{
+  position: sticky;
+  top: 0;
+  background-color: #222;
+}
+.top-bar {
+  top: 0;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.top-bar > div {
+  width: 30%;
+}
+.tob-bar > nav{
+    width: 70%;
+}
+.top-bar > div.logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.top-bar > div > h2{
+  margin-left: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+.top-bar > div > h2:hover{
+  color: #ccc;
+  cursor: pointer;
+}
+.top-bar > nav{
+    display: flex;
+    justify-content: right;
+}
+.top-bar > nav > ul {
+  padding: 30px 0;
+}
+.top-bar > nav > ul > li {
+  display: inline-block;
+  margin: 0 30px;
+}
+.top-bar > nav > ul > li > a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.1s ease-in-out;
+}
+.top-bar > nav > ul > li > a:hover{
+    color: rgb(8, 58, 169);
+}
+/*about me section*/
+#about-me {
+  font-size: 28px;
+  display: flex;
+}
+#about-me > article,
+#about-me > aside{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about-me img {
+  width: 200px;
+}
+
+/*projects section*/
+#projects {
+  display: grid;
+  gap: 40px;
+}
+#projects > .project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15% 1fr;
+}
+#projects > .project > .left-panel {
+  grid-row: span 2;
+  grid-column: 1/2;
+}
+#projects > .project > .left-panel > * {
+  text-align: left;
+}
+#projects > .project > .left-panel > .buttons > a {
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+}
+#projects > .project > .left-panel > .buttons > a > button {
+  margin-top: 5px;
+  font-size: 24px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #222;
+  background-color: transparent;
+  max-width: 600px;
+}
+#projects > .project > .left-panel > .buttons > a > button:hover {
+  background-color: #222;
+  transform: scale(1.02);
+  border: 2px solid #222;
+}
+#projects > .project > .left-panel > .image {
+  text-align: right;
+}
+
+#projects > .project > .left-panel > .image > img {
+  max-width: 600px;
+}
+#projects > .project > .title {
+  grid-row: 1/2;
+}
+#projects > .project > .description {
+  grid-row: 2/3;
+}
+#projects > .project > .title,
+#projects > .project > .description {
+  grid-column: 2/3;
+  padding: 0 40px;
+  font-size: 20px;
+}
+#projects > .project > .description > .tags > .tag {
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+/*tags for coloring abilities/used technology section*/
+.tag {
+  font-weight: 600;
+}
+.tag.html {
+  background-color: #ff2d00;
+  border: 1px solid #ff2d00;
+}
+.tag.css {
+  background-color: #0032ff;
+  border: 1px solid #0032ff;
+}
+.tag.javascript {
+  background-color: #ffa33c;
+  border: 1px solid #ffa33c;
+}
+.tag.react {
+  background-color: #00c1ff;
+  border: 1px solid #00c1ff;
+}
+.tag.redux {
+  background-color: #b200ff;
+  border: 1px solid #b200ff;
+}
+.tag.cpp {
+  background-color: #cb005c;
+  border: 1px solid #cb005c;
+}
+.tag.nodejs {
+  background-color: #87cf00;
+  border: 1px solid #87cf00;
+}
+.tag.express {
+  background-color: #07b505;
+  border: 1px solid #07b505;
+}
+.tag.ejs {
+  background-color: #cb00a6;
+  border: 1px solid #cb00a6;
+}
+.tag.webpack {
+  background-color: #6fe0ff;
+  border: 1px solid #6fe0ff;
+}
+.tag.webpack {
+  background-color: #6fe0ff;
+  border: 1px solid #6fe0ff;
+}
+.tag.excel {
+  background-color: #1a5d1a;
+  border: 1px solid #1a5d1a;
+}
+.tag.access {
+  background-color: #c51605;
+  border: 1px solid #c51605;
+}
+.tag.php {
+  background-color: #4d588e;
+  border: 1px solid #4d588e;
+}
+.tag.bootstrap {
+  background-color: #7411f7;
+  border: 1px solid #7411f7;
+}
+.tag.mysql {
+  background-color: #136594;
+  border: 1px solid #136594;
+}
+.tag.mongo {
+  background-color: #076e3f;
+  border: 1px solid #076e3f;
+}
+/* learning sources section */
+#learning-sources {
+  display: grid;
+  gap: 10px;
+  font-size: 18px;
+}
+#learning-sources > .learning-source {
+  display: grid;
+  grid-template-columns: 1fr 20%;
+  grid-template-rows: 20% 1fr;
+  padding: 0 50px;
+  grid-column-gap: 50px;
+  grid-row-gap: 20px;
+}
+#learning-sources > .learning-source > .title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+#learning-sources > .learning-source > .title > h2 {
+  margin: 0;
+}
+#learning-sources > .learning-source > .description {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#learning-sources > .learning-source > .description > a {
+  color: gray;
+}
+#learning-sources > .learning-source > .image {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+#learning-sources > .learning-source > .image > img {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  max-width: 200px;
+  max-height: 200px;
+}
+#abilities {
+  display: grid;
+  gap: 20px;
+}
+/*abilities section*/
+.abilities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.ability {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  color: #eee;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+/*form section*/
+#contact > section.form{
+    display: flex;
+    gap: 50px;
+}
+#contact > section.form > form {
+  flex: 1;
+  margin: 75px 50px 0 50px;
+  font-size: 18px;
+  color: #eee;
+}
+#contact > section.form  > div{
+    flex: 1;
+    margin-top: 50px;
+    font-size: 18px;
+}
+#contact > section.form form > div > input,
+#contact > section.form form > div > textarea {
+    font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #555;
+  border-radius: 5px;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 12px;
+  color: #eee;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+}
+#contact > section.form > form > div > input::placeholder,
+#contact > section.form > form > div > textarea::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+#contact > section.form > form > div > input:focus,
+#contact > section.form > form > div > textarea:focus {
+  outline: none;
+  border: 2px solid rgb(8, 58, 169, 0.8);
+}
+#contact > section.form > form > div > textarea {
+  resize: none;
+}
+#contact > section.form > form > button {
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #555;
+  background-color: transparent;
+}
+#contact > section.form > form > button:hover {
+  border: 2px solid rgb(8, 58, 169, 0.8);
+  color: rgb(8, 58, 169, 0.8);
+}
+
+/*footer*/
+footer{
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+}
+footer > .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+footer > .social-media > .social > a {
+  color: #eee;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-size: 20px;
+}
+footer > .social-media > .social > a > i{
+    transition: all .2s ease-in-out;
+}
+footer > .social-media > .social > a > i:hover{
+    transform: scale(1.5);
+    color: rgb(8, 58, 169, 0.8);
+}
+#copyright {
+  margin-top: 50px;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
+
+/*for screen between 1000px-1300px*/
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 18px;
+  }
+  #contact > section.form > form {
+    margin-top: 25px;
+  }
+  #contact > section.form  > div{
+      margin-top: 0px;
+  }
+  main > section {
+    padding: 50px 20px;
+    width: 900px;
+  }
+  .top-bar{
+    padding: 0 20px;
+  }
+  .top-bar > nav > ul > li{
+    margin: 0 20px;
+  }
+  #about-me {
+    font-size: 18px;
+    padding: 50px 0;
+  }
+  #about-me img {
+    width: 150px;
+  }
+  #projects > .project > .left-panel > .image > img {
+    max-width: 450px;
+  }
+  #projects > .project > .left-panel > .buttons > a > button {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 450px;
+  }
+  #projects > .project > .title,
+  #projects > .project > .description {
+    padding: 0 30px;
+    font-size: 18px;
+  }
+  #projects > .project > .description > .tags > .tag {
+    font-size: 16px;
+  }
+  .ability {
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 7px;
+  }
+  #learning-sources {
+    gap: 16px;
+    font-size: 18px;
+  }
+  #contact > section.form form > div > input,
+  #contact > section.form form > div > textarea {
+   font-size: 18px;
+  } 
+}
+
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main > section {
+    width: 700px;
+  }
+  #about-me {
+    font-size: 16px;
+  }
+  #about-me img {
+    width: 150px;
+  }
+  #projects > .project > .left-panel > .image > img {
+    max-width: 350px;
+  }
+  #projects > .project > .left-panel > .buttons > a > button {
+    font-size: 16px;
+    padding: 7px;
+    border-radius: 7px;
+    max-width: 350px;
+  }
+  #projects > .project > .title,
+  #projects > .project > .description {
+    font-size: 16px;
+  }
+  #projects > .project > .description > .tags > .tag {
+    display: inline-block;
+    margin: 0 6px 6px 6px;
+    padding: 8px 15px;
+    border-radius: 13px;
+    font-size: 14px;
+  }
+  #learning-sources {
+    display: grid;
+    gap: 20px;
+    font-size: 16px;
+  }
+  .ability {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
+  #contact > section.form > form > button {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  #contact > section.form form > div > input,
+  #contact > section.form form > div > textarea {
+   font-size: 16px;
+  } 
+  #contact > section.form  > div{
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 875px){
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 24px;
+  }
+  .top-bar > nav {
+    display: none;
+  }
+  #about-me > aside{
+    display: none;
+  }
+  #icon{
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+    font-size: 20px;
+    transition: .1s ease-in-out;
+  }
+  #icon:hover {
+    color: #ccc;
+  }
+  #projects > .project{
+    display: grid;
+    grid-template-rows: 15% 1fr 35%;
+    grid-template-columns: 1fr;
+  }
+  #projects > .project > .left-panel{
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+  #projects > .project > .left-panel > .image {
+    text-align: center;
+  }
+  #projects > .project > .left-panel > .image > img{
+    max-width: 600px;
+  }
+  
+  #projects > .project > .left-panel > .buttons > a > button{
+    max-width: 600px;
+    margin: 5px auto;
+  }
+  #projects > .project > .title{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+  }
+  #projects > .project > .description{
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  #learning-sources > .learning-source > .image{
+    display: none;
+  }
+  #learning-sources > .learning-source > .title,
+  #learning-sources > .learning-source > .description {
+  grid-column: 1/3;
+  }
+
+} 
