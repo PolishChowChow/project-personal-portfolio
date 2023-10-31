@@ -573,17 +573,8 @@ footer > .social-media > .social > a > i:hover{
   }
 }
 
-
+/*PHOOONE*/
 @media screen and (max-width: 875px){
-  h1 {
-    font-size: 42px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  p {
-    font-size: 24px;
-  }
   .top-bar > nav {
     display: none;
   }
