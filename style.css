@@ -650,3 +650,32 @@ footer > .social-media > .social > a > i:hover{
     display: none;
   }
 } 
+@media screen and (max-width: 450px){
+  body{
+    font-size: 18px;
+  }
+  h1{
+    font-size: 24px;
+  }
+  main > section {
+    width: 350px;
+    padding: 20px 10px;
+  }
+  #projects > .project > .left-panel > .image > img{
+    max-width: 300px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  #projects > .project > .left-panel > .buttons > a > button{
+    max-width: 300px;
+    margin: 5px auto;
+  }
+  .ability {
+    width: 90px;
+    height: 90px;
+  }
+  footer > .social-media{
+    gap: 30px;
+  }
+}
