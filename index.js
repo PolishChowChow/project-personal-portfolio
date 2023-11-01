@@ -51,8 +51,11 @@ function validate(){
         setMessage("error","You cannot let fields being empty");
         return;
     }
+    if(!emailRegex.test(email.value)){
+        setMessage("error","Bad email type, it should like something like: test_address@email.com");
+        return;
+    }
     setMessage("success","Sending email ended successfully");
-
 }
 const asideBarLinks = document.querySelectorAll("a.aside-bar-link");
 const icon = document.querySelector("button#icon");
