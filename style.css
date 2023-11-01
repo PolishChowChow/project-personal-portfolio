@@ -38,16 +38,16 @@ main > section {
   background-color: #222;
   transition: all 0.2s ease-out;
   padding: 20px 0;
+  box-sizing: border-box;
 }
-#icon{
+#icon {
   display: none;
 }
-.navigation.active{
-  box-sizing: border-box;
+.navigation.active {
   padding: 20px 50px;
   width: 70%;
 }
-.navigation.active > ul{
+.navigation > ul {
   margin-top: 50px;
   display: flex;
   list-style-type: none;
@@ -55,31 +55,31 @@ main > section {
   gap: 10px;
   font-size: 24px;
 }
-.navigation.active > ul > li > a {
+.navigation > ul > li > a {
   text-decoration: none;
   color: #eee;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.navigation.active > ul > li > a:hover{
+.navigation > ul > li > a:hover {
   color: #ccc;
   padding-left: 10px;
 }
-.cancel-navigation{
+.cancel-navigation {
   z-index: 1;
   position: fixed;
   height: 100%;
   width: 0;
   box-sizing: border-box;
-  background-color: rgba(0,0,0,0);
-  transition: background-color .2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease-in-out;
 }
-.cancel-navigation.active{
+.cancel-navigation.active {
   width: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /*navbar*/
-body > header{
+body > header {
   position: sticky;
   top: 0;
   background-color: #222;
@@ -93,26 +93,26 @@ body > header{
 .top-bar > div {
   width: 30%;
 }
-.tob-bar > nav{
-    width: 70%;
+.tob-bar > nav {
+  width: 70%;
 }
 .top-bar > div.logo {
   display: flex;
   justify-content: left;
   align-items: center;
 }
-.top-bar > div > h2{
+.top-bar > div > h2 {
   margin-left: 20px;
   color: #ccc;
   cursor: pointer;
 }
-.top-bar > div > h2:hover{
+.top-bar > div > h2:hover {
   color: #ccc;
   cursor: pointer;
 }
-.top-bar > nav{
-    display: flex;
-    justify-content: right;
+.top-bar > nav {
+  display: flex;
+  justify-content: right;
 }
 .top-bar > nav > ul {
   padding: 30px 0;
@@ -127,8 +127,8 @@ body > header{
   font-size: 20px;
   transition: all 0.1s ease-in-out;
 }
-.top-bar > nav > ul > li > a:hover{
-    color: rgb(8, 58, 169);
+.top-bar > nav > ul > li > a:hover {
+  color: rgb(8, 58, 169);
 }
 /*about me section*/
 #about-me {
@@ -136,7 +136,7 @@ body > header{
   display: flex;
 }
 #about-me > article,
-#about-me > aside{
+#about-me > aside {
   flex: 1;
   display: flex;
   align-items: center;
@@ -345,9 +345,9 @@ body > header{
 }
 
 /*form section*/
-#contact > section.form{
-    display: flex;
-    gap: 50px;
+#contact > section.form {
+  display: flex;
+  gap: 50px;
 }
 #contact > section.form > form {
   flex: 1;
@@ -355,14 +355,14 @@ body > header{
   font-size: 18px;
   color: #eee;
 }
-#contact > section.form  > div{
-    flex: 1;
-    margin-top: 50px;
-    font-size: 18px;
+#contact > section.form > div {
+  flex: 1;
+  margin-top: 50px;
+  font-size: 18px;
 }
 #contact > section.form form > div > input,
 #contact > section.form form > div > textarea {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   border: 2px solid #555;
   border-radius: 5px;
   width: 100%;
@@ -404,10 +404,9 @@ body > header{
 }
 
 /*footer*/
-footer{
+footer {
   padding-top: 50px;
   padding-bottom: 20px;
-
 }
 footer > .social-media {
   display: flex;
@@ -421,20 +420,24 @@ footer > .social-media > .social > a {
   transition: all 0.2s ease-in-out;
   font-size: 20px;
 }
-footer > .social-media > .social > a > i{
-    transition: all .2s ease-in-out;
+footer > .social-media > .social > a > i {
+  transition: all 0.2s ease-in-out;
 }
-footer > .social-media > .social > a > i:hover{
-    transform: scale(1.5);
-    color: rgb(8, 58, 169, 0.8);
+footer > .social-media > .social > a > i:hover {
+  transform: scale(1.5);
+  color: rgb(8, 58, 169, 0.8);
 }
 #copyright {
   margin-top: 50px;
-  font-size: 14px;
-  text-align: center;
   padding: 10px;
 }
-
+.source{
+  font-size: 14px;
+  text-align: center;
+}
+.source a{
+  color: gray;
+}
 /*for screen between 1000px-1300px*/
 @media screen and (max-width: 1300px) {
   h1 {
@@ -449,22 +452,23 @@ footer > .social-media > .social > a > i:hover{
   #contact > section.form > form {
     margin-top: 25px;
   }
-  #contact > section.form  > div{
-      margin-top: 0px;
+  #contact > section.form > div {
+    margin-top: 0px;
   }
   main > section {
     padding: 50px 20px;
+    padding-top: 100px;
     width: 900px;
   }
-  .top-bar{
+  .top-bar {
     padding: 0 20px;
   }
-  .top-bar > nav > ul > li{
+  .top-bar > nav > ul > li {
     margin: 0 20px;
   }
   #about-me {
     font-size: 18px;
-    padding: 50px 0;
+    padding-top: 120px;
   }
   #about-me img {
     width: 150px;
@@ -500,10 +504,9 @@ footer > .social-media > .social > a > i:hover{
   }
   #contact > section.form form > div > input,
   #contact > section.form form > div > textarea {
-   font-size: 18px;
-  } 
+    font-size: 18px;
+  }
 }
-
 
 @media screen and (max-width: 1000px) {
   h1 {
@@ -566,16 +569,16 @@ footer > .social-media > .social > a > i:hover{
   }
   #contact > section.form form > div > input,
   #contact > section.form form > div > textarea {
-   font-size: 16px;
-  } 
-  #contact > section.form  > div{
+    font-size: 16px;
+  }
+  #contact > section.form > div {
     font-size: 16px;
   }
 }
 
 /*PHOOONE*/
-@media screen and (max-width: 875px){
-  body{
+@media screen and (max-width: 875px) {
+  body {
     font-size: 24px;
   }
   main > section {
@@ -584,10 +587,10 @@ footer > .social-media > .social > a > i:hover{
   .top-bar > nav {
     display: none;
   }
-  #about-me > aside{
+  #about-me > aside {
     display: none;
   }
-  #icon{
+  #icon {
     cursor: pointer;
     background-color: transparent;
     border: transparent;
@@ -597,85 +600,110 @@ footer > .social-media > .social > a > i:hover{
     justify-content: right;
     padding-right: 20px;
     font-size: 20px;
-    transition: .1s ease-in-out;
+    transition: 0.1s ease-in-out;
   }
   #icon:hover {
     color: #ccc;
   }
-  #projects > .project{
+  #projects > .project {
     display: grid;
     grid-template-rows: 15% 1fr 35%;
     grid-template-columns: 1fr;
   }
-  #projects > .project > .left-panel{
+  #projects > .project > .left-panel {
     grid-row: 2/3;
     grid-column: 1/3;
   }
   #projects > .project > .left-panel > .image {
     text-align: center;
   }
-  #projects > .project > .left-panel > .image > img{
+  #projects > .project > .left-panel > .image > img {
     max-width: 400px;
   }
-  h2{
+  h2 {
     font-size: 24px;
   }
-  #projects > .project > .left-panel > .buttons > a > button{
+  #projects > .project > .left-panel > .buttons > a > button {
     max-width: 400px;
     margin: 5px auto;
   }
-  #projects > .project > .title{
+  #projects > .project > .title {
     grid-row: 1/2;
     grid-column: 1/3;
     text-align: center;
   }
-  #projects > .project > .description{
+  #projects > .project > .description {
     grid-row: 3/4;
     grid-column: 1/3;
   }
-  #learning-sources{
+  #learning-sources {
     gap: 50px;
   }
-  #learning-sources > .learning-source > .image{
+  #learning-sources > .learning-source > .image {
     display: none;
   }
   #learning-sources > .learning-source {
     grid-template-rows: 10% 1fr;
-}
+  }
   #learning-sources > .learning-source > .title,
   #learning-sources > .learning-source > .description {
     grid-column: 1/3;
   }
-  .div{
+  .div {
     display: none;
   }
-} 
-@media screen and (max-width: 450px){
-  body{
+}
+
+/*PHONE PHONE*/
+@media screen and (max-width: 450px) {
+  body {
     font-size: 18px;
   }
-  h1{
+  h1 {
     font-size: 24px;
   }
   main > section {
-    width: 350px;
+    width: 300px;
     padding: 20px 10px;
+    padding-top: 70px;
   }
-  #projects > .project > .left-panel > .image > img{
+  #projects {
+    gap: 100px;
+  }
+  #projects > .project > .left-panel > .image > img {
     max-width: 300px;
   }
-  h2{
+  h2 {
     font-size: 20px;
   }
-  #projects > .project > .left-panel > .buttons > a > button{
+  #projects > .project > .left-panel > .buttons > a > button {
     max-width: 300px;
     margin: 5px auto;
+  }
+  #learning-sources > .learning-source {
+    padding: 0 10px;
   }
   .ability {
     width: 90px;
     height: 90px;
   }
-  footer > .social-media{
+  .abilities-list {
+    justify-content: center;
+  }
+  #contact > section.form > form {
+    flex: 1;
+    margin: 50px 10px 0 10px;
+    font-size: 18px;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer > .social-media {
     gap: 30px;
+  }
+  .navigation > ul {
+    padding: 0;
+    font-size: 20px;
   }
 }
