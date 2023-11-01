@@ -55,6 +55,19 @@ main > section {
   gap: 10px;
   font-size: 24px;
 }
+.navigation > .top-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation > .top-nav-bar > button {
+  font-size: 24px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  height: 33%;
+}
 .navigation > ul > li > a {
   text-decoration: none;
   color: #eee;
@@ -77,7 +90,9 @@ main > section {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.message{
+
+/*setting communicates*/
+.message {
   z-index: 3;
   position: fixed;
   bottom: 10px;
@@ -85,21 +100,28 @@ main > section {
   color: white;
   padding: 10px;
   font-size: 20px;
-  width:33%;
+  width: 33%;
   text-align: center;
   border-radius: 10px;
-  transition: all .2s ease-in-out;
-  
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
-#error{
+#error {
   background-color: red;
 }
-#success{
+.message#error:hover {
+  background-color: #7E1717;
+}
+#success {
   background-color: green;
 }
-.message.active{
+.message#success:hover {
+  background-color: #004225;
+}
+.message.active {
   left: 10px;
 }
+
 /*navbar*/
 body > header {
   position: sticky;
@@ -453,11 +475,11 @@ footer > .social-media > .social > a > i:hover {
   margin-top: 50px;
   padding: 10px;
 }
-.source{
+.source {
   font-size: 14px;
   text-align: center;
 }
-.source a{
+.source a {
   color: gray;
 }
 /*for screen between 1000px-1300px*/
@@ -674,6 +696,10 @@ footer > .social-media > .social > a > i:hover {
   .div {
     display: none;
   }
+  .message{
+    width: 50%;
+    font-size: 18px;
+  }
 }
 
 /*PHONE PHONE*/
@@ -727,5 +753,13 @@ footer > .social-media > .social > a > i:hover {
   .navigation > ul {
     padding: 0;
     font-size: 20px;
+  }
+  .navigation.active {
+    padding: 10px 20px;
+    width: 70%;
+  }
+  .message{
+    font-size: 14px;
+    width: 60%;
   }
 }

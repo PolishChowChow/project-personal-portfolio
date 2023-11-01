@@ -15,13 +15,28 @@
 </head>
 <body>
     <section class="navigation">
-        <h1>Nagivation</h1>
+        <section class="top-nav-bar">
+            <h1>Nagivation</h1>
+            <button type="button" id="closeNavBar">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </section>
         <ul>
-            <li><a class="aside-bar-link" href="#about-me">About Me</a></li>
-            <li><a class="aside-bar-link" href="#projects">Projects</a></li>
-            <li><a class="aside-bar-link" href="#learning-sources">Learning</a></li>
-            <li><a class="aside-bar-link" href="#abilities">Skills</a></li>
-            <li><a class="aside-bar-link" href="#contact">Contact</a></li>
+            <li>
+                <a class="aside-bar-link" href="#about-me">About Me</a>
+            </li>
+            <li>
+                <a class="aside-bar-link" href="#projects">Projects</a>
+            </li>
+            <li>
+                <a class="aside-bar-link" href="#learning-sources">Learning</a>
+            </li>
+            <li>
+                <a class="aside-bar-link" href="#abilities">Skills</a>
+            </li>
+            <li>
+                <a class="aside-bar-link" href="#contact">Contact</a>
+            </li>
         </ul>
     </section>
     <section class="cancel-navigation"></section>
@@ -419,21 +434,21 @@
             <section class="form">
                 <form action="https://formsubmit.co/fc5a159da8d03ded2e887f19247e5a3e" method="POST">
                     <div class="input" id="div1">
-                        <input id="email" type="text" name="email" placeholder="E-mail">
+                        <input id="email" name="email" type="text" placeholder="E-mail">
                     </div>
                     <br>
                     <div class="input" id="div2">
-                        <input id="topic" type="text" name="topic" placeholder="Topic">
+                        <input id="topic"  name="topic" type="text" placeholder="Topic">
                     </div>
                     <br>
                     <div class="input" id="div3">
-                        <textarea  id="description" cols="30" rows="10" name="content" placeholder="Description"></textarea>
+                        <textarea  id="description" cols="30" rows="10"  placeholder="Description"></textarea>
                     </div>
                     <br>
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="_next" value="https://polishchowchow.github.io/project-personal-portfolio/">
-                    <button type="submit">Send</button>
+                    <button>Send</button>
                 </form>
                 <div class="div">
                     <p>In which case you should contact me?</p>
