@@ -77,7 +77,29 @@ main > section {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-
+.message{
+  z-index: 3;
+  position: fixed;
+  bottom: 10px;
+  left: -500px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  width:33%;
+  text-align: center;
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+  
+}
+#error{
+  background-color: red;
+}
+#success{
+  background-color: green;
+}
+.message.active{
+  transform: translateX(550px);
+}
 /*navbar*/
 body > header {
   position: sticky;

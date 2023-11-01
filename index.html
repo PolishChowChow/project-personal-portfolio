@@ -25,6 +25,8 @@
         </ul>
     </section>
     <section class="cancel-navigation"></section>
+    <section id="error" class="message"></section>
+    <section id="success" class="message"></section>
     <header>
         <section class="top-bar">
             <div class="logo">
@@ -45,17 +47,23 @@
         </section>
     </header>
     <main>
+        <section class="intro">
+            <h1>Who am I?</h1>
+            <p>Hi, I'm Bartek, I'm young person passionated about web development, I want to become MERN stack developer, operate JavaScript on the
+                very high level, program Internet Application from design to operations on data.
+            </p>
+        </section>
         <section class="flex" id="about-me">
             <article>
                 <div class="content">
                     <h1>About me</h1>
                     <p>
-                        I am a 19-year-old student passionate about web development. 
-                        My goal is to become a MERN stack developer. I have attended a 
+                        I'm 19 yearsold student. I attend
                         5-year program at a medium school with a focus on IT. Additionally, 
-                        I am studying on my own, striving to gain as much knowledge as I can handle. 
-                        My passions include web development, of course, but also cars, League of Legends (LoL) esports,
-                        and indulging in spaghetti."
+                        I am studying on my own, striving to gain as much knowledge in web development department as I can handle. 
+                        Besides everything connected with JavaScript I also feel comfortable with PHP. Apart from web development I'm 
+                        interested in car mechanic, football, history of WW2 and esport.
+
                     </p>
                 </div>
             </article>
@@ -409,19 +417,22 @@
             <h1>Contact Form</h1>
             <p>Are you interest? Send me a message, talk about the occasion.</p>
             <section class="form">
-                <form action="mailto:bartlomiej.jan.stoklosa@gmail.com">
+                <form action="https://formsubmit.co/bartlomiej.jan.stoklosa@gmail.com" method="POST">
                     <div class="input" id="div1">
-                        <input type="text" placeholder="Name">
+                        <input id="email" type="text" name="email" placeholder="E-mail">
                     </div>
                     <br>
                     <div class="input" id="div2">
-                        <input type="text" placeholder="Topic">
+                        <input id="topic" type="text" name="topic" placeholder="Topic">
                     </div>
                     <br>
                     <div class="input" id="div3">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+                        <textarea  id="description" cols="30" rows="10" name="content" placeholder="Description"></textarea>
                     </div>
                     <br>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" value="https://polishchowchow.github.io/project-personal-portfolio/">
                     <button type="submit">Send</button>
                 </form>
                 <div class="div">
