@@ -16,26 +16,26 @@
 <body>
     <section class="navigation">
         <section class="top-nav-bar">
-            <h1>Nagivation</h1>
+            <h1 class="content-bar">Nagivation</h1>
             <button type="button" id="closeNavBar">
                 <i class="fa-solid fa-x"></i>
             </button>
         </section>
         <ul>
             <li>
-                <a class="aside-bar-link" href="#about-me">About Me</a>
+                <a class="aside-bar-link content-bar" href="#about-me">About Me</a>
             </li>
             <li>
-                <a class="aside-bar-link" href="#projects">Projects</a>
+                <a class="aside-bar-link content-bar" href="#projects">Projects</a>
             </li>
             <li>
-                <a class="aside-bar-link" href="#learning-sources">Learning</a>
+                <a class="aside-bar-link content-bar" href="#learning-sources">Learning</a>
             </li>
             <li>
-                <a class="aside-bar-link" href="#abilities">Skills</a>
+                <a class="aside-bar-link content-bar" href="#abilities">Skills</a>
             </li>
             <li>
-                <a class="aside-bar-link" href="#contact">Contact</a>
+                <a class="aside-bar-link content-bar" href="#contact">Contact</a>
             </li>
         </ul>
     </section>
@@ -49,11 +49,17 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#learning-sources">Learning</a></li>
-                    <li><a href="#abilities">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button type="button" id="language-button">
+                            <div>PL</div>
+                            <div class="active">ENG</div>
+                        </button>
+                    </li>
+                    <li><a href="#about-me" class="content-bar">About Me</a></li>
+                    <li><a href="#projects" class="content-bar">Projects</a></li>
+                    <li><a href="#learning-sources" class="content-bar">Learning</a></li>
+                    <li><a href="#abilities" class="content-bar">Skills</a></li>
+                    <li><a href="#contact" class="content-bar">Contact</a></li>
                 </ul>
             </nav>
             <button type="button" id="icon">
@@ -63,16 +69,16 @@
     </header>
     <main>
         <section class="intro">
-            <h1>Who am I?</h1>
-            <p>Hi, I'm Bartek, I'm young person passionated about web development, I want to become MERN stack developer, operate JavaScript on the
+            <h1 class="content-bar">Who am I?</h1>
+            <p class="content-bar">Hi, I'm Bartek, I'm young person passionated about web development, I want to become MERN stack developer, operate JavaScript on the
                 very high level, program Internet Application from design to operations on data.
             </p>
         </section>
         <section class="flex" id="about-me">
             <article>
                 <div class="content">
-                    <h1>About me</h1>
-                    <p>
+                    <h1 class="content-bar">About me</h1>
+                    <p class="content-bar">
                         I'm 19 yearsold student. I attend
                         5-year program at a medium school with a focus on IT. Additionally, 
                         I am studying on my own, striving to gain as much knowledge in web development department as I can handle. 
@@ -88,8 +94,8 @@
         </section>
         <section id="projects">
             <header>
-                <h1>Acomplished projects</h1>
-                <p>Here you can see few projects that I did by myself or following courses step by step:</p>
+                <h1 class="content-bar">Acomplished projects</h1>
+                <p class="content-bar">Here you can see few projects that I did by myself or following courses step by step:</p>
             </header>
             <article class="project">
                 <div class="left-panel">
@@ -105,11 +111,11 @@
                     </div>
                 </div>
                     <div class="title">
-                        <h2>Todolist with express JS</h2>
+                        <h2 class="content-bar">Todolist with express JS</h2>
                     </div>
                     <div class="description">
                         <div class="content">
-                            <p>As you can see it's literaly todolist based on NodeJS and ExpressJS frameworks, did by following step by step course on Udemy</p>
+                            <p class="content-bar">As you can see it's literaly todolist based on NodeJS and ExpressJS frameworks, did by following step by step course on Udemy</p>
                         </div>
                         <div class="tags">
                             <div class="tag html">HTML</div>
@@ -135,11 +141,11 @@
                     </div>
                 </div>
                     <div class="title">
-                        <h2>Weather app</h2>
+                        <h2 class="content-bar">Weather app</h2>
                     </div>
                     <div class="description">
                         <div class="content">
-                            <p>It's an app, which allow you checking basics informations about weather for whatever city you want. Also this app uses webpack bundler and OpenWeather API.</p>
+                            <p class="content-bar">It's an app, which allow you checking basics informations about weather for whatever city you want. Also this app uses webpack bundler and OpenWeather API.</p>
                         </div>
                         <div class="tags">
                             <div class="tag html">
@@ -171,11 +177,11 @@
                     </div>
                 </div>
                     <div class="title">
-                        <h2>Todolist using C++</h2>
+                        <h2 class="content-bar">Todolist using C++</h2>
                     </div>
                     <div class="description">
                         <div class="content">
-                            <p>It's todolist app using c++, presenting usage more complex data structures like objects, lists</p>
+                            <p class="content-bar">It's todolist app using c++, presenting usage more complex data structures like objects, lists</p>
                         </div>
                         <div class="tags">
                             <div class="tag cpp">
@@ -198,11 +204,11 @@
                     </div>
                 </div>
                     <div class="title">
-                        <h2>Shopping cart</h2>
+                        <h2 class="content-bar">Shopping cart</h2>
                     </div>
                     <div class="description">
                         <div class="content">
-                            <p>This is a shopping card, allowing to add products to the card and checkout. It allowed me to use react in practice.</p>
+                            <p class="content-bar">This is a shopping card, allowing to add products to the card and checkout. It allowed me to use react in practice.</p>
                         </div>
                         <div class="tags">
                             <div class="tag html">
@@ -234,11 +240,11 @@
                     </div>
                 </div>
                     <div class="title">
-                        <h2>Project Cars</h2>
+                        <h2 class="content-bar">Project Cars</h2>
                     </div>
                     <div class="description">
                         <div class="content">
-                            <p>Project cars "sounds like a game name" is representation and my practice of using Redux and redux toolkit, did by following Udemy course.</p>
+                            <p class="content-bar">Project cars (sounds like a game name) is representation and my practice of using Redux and redux toolkit, did by following Udemy course.</p>
                         </div>
                         <div class="tags">
                             <div class="tag html">
@@ -273,11 +279,11 @@
                     </div>
                 </div>
                     <div class="title">
-                        <h2>Admin Dashboard</h2>
+                        <h2 class="content-bar">Admin Dashboard</h2>
                     </div>
                     <div class="description">
                         <div class="conpadding: 0 10px;tent">
-                            <p>This projects is admin dashboard design did with usage HTML, CSS and a little JavaScript, proving I can do more complex designs.</p>
+                            <p class="content-bar">This projects is admin dashboard design did with usage HTML, CSS and a little JavaScript, proving I can do more complex designs.</p>
                         </div>
                         <div class="tags">
                             <div class="tag html">
@@ -295,8 +301,8 @@
         </section>
         <section id="learning-sources">
             <header>
-                <h1>Learning sources</h1>
-                <p>
+                <h1 class="content-bar">Learning sources</h1>
+                <p class="content-bar">
                     Now I will show you some sources of my knoledge.
                 </p>
             </header>
@@ -304,10 +310,10 @@
                 <div class="title">
                     <h2>TheOdinProject</h2>
                 </div>
-                <div class="description">
+                <div class="description content-bar">
                 <a href="https://www.theodinproject.com/">TheOdinProject</a> is my main source of knowledge, perfect for learning everything about the fundamentals of web development
                  (HTML, CSS, JS), but also frameworks like ReactJS. The course also offers material about becoming a full-stack Ruby developer and full-stack JavaScript developer,
-                  which is the path I am currently on, among many other resources. It's completely free, and I strongly recommend it.
+                  which is the path I am currently on. It's completely free, and I strongly recommend it.
                 </div>
                 <div class="image">
                     <img src="assets/odin-logo.png" alt="TheOdinProject logo">
@@ -317,7 +323,7 @@
                     <div class="title">
                         <h2>Udemy</h2>
                     </div>
-                    <div class="description">
+                    <div class="description content-bar">
                         <a href="https://www.udemy.com/">Udemy</a> is a learning platform with a wide range of courses, including web development courses.
                         These courses are paid, but in my opinion, they are well worth the prices. Udemy also offers courses covering various programming languages,
                         concepts, and more. There's plenty to choose from. Even if you're not interested in learning programming and you have some funds to spare,
@@ -331,7 +337,7 @@
                     <div class="title">
                         <h2>Sololearn</h2>
                     </div>
-                    <div class="description">
+                    <div class="description content-bar">
                         <a href="https://www.sololearn.com/">Sololearn</a> is an app that offers the opportunity to learn over 20 programming languages. 
                         It provides an easy way to grasp the basics of theoretical knowledge and understand fundamental concepts in each of these languages. 
                         The simplicity of the exercises enables you to learn on the go, whether you're on the bus, at school, or even while waiting for your meal in a restaurant.
@@ -344,7 +350,7 @@
                     <div class="title">
                         <h2>ChatGPT</h2>
                     </div>
-                    <div class="description">
+                    <div class="description content-bar">
                         <a href="https://chat.openai.com/">ChatGPT</a> is an AI that enables you to send queries and receive responses in plain,
                         human language, just like having a conversation with a friend. I use it, for example, to explain more complex topics,
                         provide examples of using functions, or assist in code refactoring. It's a very useful tool.
@@ -356,12 +362,12 @@
         </section>
         <section id="abilities">
             <header>
-                <h1>My skills</h1>
-                <p>Here you can see a skill list, that I develop, learn and work on it</p>
+                <h1 class="content-bar">My skills</h1>
+                <p class="content-bar">Here you can see a skill list, that I develop, learn and work on it</p>
             </header>
             <article class="abilities-group">
                 <header>
-                    <h2>Fundamentals of web develompent:</h2>
+                    <h2 class="content-bar">Fundamentals of web develompent:</h2>
                 </header>
                 <section class="abilities-list">
                     <section class="ability tag html">
@@ -381,7 +387,7 @@
             </article>
             <article class="abilities-group">
                 <header>
-                    <h2>Frameworks:</h2>
+                    <h2 class="content-bar">Frameworks:</h2>
                 </header>
                 <section class="abilities-list">
                     <section class="ability tag bootstrap">
@@ -400,7 +406,7 @@
             </article>
             <article class="abilities-group">
                 <header>
-                    <h2>Databases:</h2>
+                    <h2 class="content-bar">Databases:</h2>
                 </header>
                 <section class="abilities-list">
                     <section class="ability tag mysql">
@@ -416,7 +422,7 @@
             </article>
             <article>
                 <header>
-                    <h2>Other that I'm learning aside:</h2>
+                    <h2 class="content-bar">Other that I'm learning aside:</h2>
                 </header>
                 <section class="abilities-list">
                     <section class="ability tag excel">
@@ -429,8 +435,8 @@
             </article>
         </section>
         <section class="contact-form" id="contact">
-            <h1>Contact Form</h1>
-            <p>Are you interest? Send me a message, talk about the occasion.</p>
+            <h1 class="content-bar">Contact Form</h1>
+            <p class="content-bar">Are you interest? Send me a message, talk about the occasion.</p>
             <section class="form">
                 <form action="https://formsubmit.co/fc5a159da8d03ded2e887f19247e5a3e" method="POST">
                     <div class="input" id="div1">
@@ -451,21 +457,21 @@
                     <button>Send</button>
                 </form>
                 <div class="div">
-                    <p>In which case you should contact me?</p>
+                    <p class="content-bar">In which case you should contact me?</p>
                     <ul>
-                        <li>
+                        <li class="content-bar">
                             Trying to cooperate with me
                         </li>
-                        <li>
-                            Feedback about github repos "including this site"
+                        <li class="content-bar">
+                            Feedback about github repos 'including this site'
                         </li>
-                        <li>
+                        <li class="content-bar">
                             Missing informations and any doubts connected with me
                         </li>
-                        <li>
+                        <li class="content-bar">
                             Ask about things connected with technology that I'm learning
                         </li>
-                        <li>
+                        <li class="content-bar">
                             Promote any learning source you think is worth
                         </li>
                     </ul>
@@ -498,8 +504,8 @@
         </section>
         <section class="copyright-section">
             <p id="copyright" class="source"></p>
-            <p class="source">Icons used on this page comes from <a href="https://fontawesome.com/">Fontawesome</a></p>
-            <p class="source">FavIcon added by <a href="https://www.pexels.com/pl-pl/zdjecie/pies-zwierze-domowe-uroczy-futro-6659247/">Invisible Look</a></p>
+            <p class="source content-bar">Icons used on this page comes from <a href="https://fontawesome.com/">Fontawesome</a></p>
+            <p class="source content-bar">FavIcon added by <a href="https://www.pexels.com/pl-pl/zdjecie/pies-zwierze-domowe-uroczy-futro-6659247/">Invisible Look</a></p>
         </section>
     </footer>
 </body>
