@@ -1,11 +1,12 @@
 const asideBarLinks = document.querySelectorAll("a.aside-bar-link");
 const icon = document.querySelector("button#icon");
-const contentBars = document.querySelectorAll(".content-bar");
+const CONTENT_BARS = document.querySelectorAll(".content-bar");
 const cancelNavigation = document.querySelector("section.cancel-navigation");
 const form = document.querySelector("form");
 const closeNavbarButton = document.querySelector("button#closeNavBar");
 const languageButton = document.querySelector("button#language-button");
-const polishContent = [
+const languageButton2 = document.querySelector("button#language-button-2");
+const POLISH_CONTENT = [
     'Nawigacja',
     'O mnie',
     'Projekty',
@@ -58,7 +59,7 @@ const polishContent = [
     'Ikony używane na tej stronie pochodzą z <a href="https://fontawesome.com/">Fontawesome</a>.',
     'Ikona w polu adresowym przeglądarki pochodzi z <a href="https://www.pexels.com/pl-pl/zdjecie/pies-zwierze-domowe-uroczy-futro-6659247/">Invisible Look</a> ',
 ];
-const englishContent = [
+const ENGLISH_CONTENT = [
     'Navigation',
     'About me',
     'Projects',
@@ -111,16 +112,17 @@ const englishContent = [
     "Icons used on this page comes from <a href='https://fontawesome.com/'>Fontawesome</a>",
     "FavIcon added by <a href='https://www.pexels.com/pl-pl/zdjecie/pies-zwierze-domowe-uroczy-futro-6659247/'>Invisible Look</a>",
 ];
-/*giving copyright sign, name and year to the footer paragraph*/
+
+/*translation*/
 let IS_ENGLISH = true;
 function setPolishLanguage(){
     for(let i=0;i<51;i++){
-        contentBars[i].innerHTML = polishContent[i];
+        CONTENT_BARS[i].innerHTML = POLISH_CONTENT[i];
     }
 }
 function setEnglishLanguage(){
     for(let i=0;i<51;i++){
-        contentBars[i].innerHTML = englishContent[i];
+        CONTENT_BARS[i].innerHTML = ENGLISH_CONTENT[i];
     }
 }
 function setLanguage(){
@@ -133,6 +135,8 @@ function setLanguage(){
     }
     IS_ENGLISH = !IS_ENGLISH;
 }
+
+/*giving copyright sign, name and year to the footer paragraph*/
 function setCopyright(){
     const copyrightParagraph = document.querySelector("#copyright");
     const year = new Date().getFullYear();
@@ -214,6 +218,10 @@ cancelNavigation.addEventListener("click",closeNavigation);
 icon.addEventListener("click",openNavigation);
 closeNavbarButton.addEventListener("click",closeNavigation);
 languageButton.addEventListener("click",setLanguage);
+languageButton2.addEventListener("click",()=>{
+    closeNavigation();
+    setLanguage();
+});
 asideBarLinks.forEach(asideBarLink=> {
     asideBarLink.addEventListener("click",closeNavigation)
 });

@@ -134,8 +134,8 @@ body > header {
   display: flex;
   justify-content: space-between;
 }
-.top-bar > div {
-  width: 30%;
+.top-bar > div.logo {
+  width: 25%;
 }
 .tob-bar > nav {
   width: 70%;
@@ -165,7 +165,12 @@ body > header {
   display: inline-block;
   margin: 0 30px;
 }
-.top-bar > nav > ul > li > #language-button{
+.top-bar > div.btn {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.top-bar > div.btn > #language-button{
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -177,14 +182,33 @@ body > header {
   cursor: pointer;
   padding: 0;
 }
-.top-bar > nav > ul > li > #language-button > div{
+#language-button > div{
   margin: 0;
   padding: 10px;
 }
-.top-bar > nav > ul > li > #language-button > div.active{
+#language-button > div.active,
+#language-button-2 > div.active{
   background-color: white;
   color: #111;
 }
+#language-button > div,
+#language-button-2 > div{
+  margin: 0;
+  padding: 10px;
+}
+#language-button-2{
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid white;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
 .top-bar > nav > ul > li > a {
   color: #eee;
   text-decoration: none;
@@ -590,6 +614,32 @@ footer > .social-media > .social > a > i:hover {
   main > section {
     width: 700px;
   }
+  .top-bar{
+    padding: 0 10px;
+  }
+  .top-bar > div.btn > #language-button{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid white;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+  }
+  .top-bar > div.btn > #language-button > div{
+    margin: 0;
+    padding: 7px;
+  }
+  .top-bar > div.btn > #language-button > div.active{
+    background-color: white;
+    color: #111;
+  }
+  .top-bar > nav > ul > li {
+    margin: 0 10px;
+}
   #about-me {
     font-size: 16px;
   }
@@ -647,6 +697,12 @@ footer > .social-media > .social > a > i:hover {
   }
   main > section {
     width: 400px;
+  }
+  .top-bar{
+    gap: 10px;
+  }
+  .top-bar > .logo{
+    flex:1;
   }
   .top-bar > nav {
     display: none;
@@ -730,19 +786,25 @@ footer > .social-media > .social > a > i:hover {
   h1 {
     font-size: 24px;
   }
+  h2 {
+    font-size: 20px;
+  }
   main > section {
     width: 300px;
     padding: 20px 10px;
     padding-top: 70px;
+  }
+  #language-button-2{
+    display: flex;
+  }
+  .top-bar > div.btn{
+    display: none;
   }
   #projects {
     gap: 100px;
   }
   #projects > .project > .left-panel > .image > img {
     max-width: 300px;
-  }
-  h2 {
-    font-size: 20px;
   }
   #projects > .project > .left-panel > .buttons > a > button {
     max-width: 300px;
