@@ -81,7 +81,7 @@ main > section {
   z-index: 3;
   position: fixed;
   bottom: 10px;
-  left: -500px;
+  left: -700px;
   color: white;
   padding: 10px;
   font-size: 20px;
@@ -98,7 +98,7 @@ main > section {
   background-color: green;
 }
 .message.active{
-  transform: translateX(550px);
+  left: 10px;
 }
 /*navbar*/
 body > header {

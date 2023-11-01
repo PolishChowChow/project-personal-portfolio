@@ -61,10 +61,7 @@ const asideBarLinks = document.querySelectorAll("a.aside-bar-link");
 const icon = document.querySelector("button#icon");
 const cancelNavigation = document.querySelector("section.cancel-navigation");
 const form = document.querySelector("form");
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    validate();
-})
+form.addEventListener("submit",validate)
 cancelNavigation.addEventListener("click",closeNavigation);
 icon.addEventListener("click",openNavigation);
 asideBarLinks.forEach(asideBarLink=> {
