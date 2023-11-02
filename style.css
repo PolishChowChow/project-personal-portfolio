@@ -224,6 +224,9 @@ body > header {
   font-size: 28px;
   display: flex;
 }
+#closeNavBar{
+  cursor: pointer;
+}
 #about-me > article,
 #about-me > aside {
   flex: 1;
