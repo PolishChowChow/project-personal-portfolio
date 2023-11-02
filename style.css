@@ -185,6 +185,7 @@ body > header {
 #language-button > div{
   margin: 0;
   padding: 10px;
+  transition: all .1s ease-in-out;
 }
 #language-button > div.active,
 #language-button-2 > div.active{

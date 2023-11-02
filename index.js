@@ -6,6 +6,15 @@ const form = document.querySelector("form");
 const closeNavbarButton = document.querySelector("button#closeNavBar");
 const languageButton = document.querySelector("button#language-button");
 const languageButton2 = document.querySelector("button#language-button-2");
+const languageButtonSwitches = document.querySelectorAll("button#language-button > div");
+const languageButtonSwitches2 = document.querySelectorAll("button#language-button-2 > div");
+const submitButton = document.querySelector("button#send");
+const gitHubRedirectButtons = document.querySelectorAll(".github");
+const inputEmail = document.querySelector("input#email");
+const inputTopic = document.querySelector("input#topic");
+const inputDescription = document.querySelector("textarea#description");
+const p_github = 'Zobacz na <i class="fa-brands fa-github"></i>';
+const e_github = 'See code on <i class="fa-brands fa-github"></i>';
 const POLISH_CONTENT = [
     'Nawigacja',
     'O mnie',
@@ -126,13 +135,32 @@ function setEnglishLanguage(){
     }
 }
 function setLanguage(){
-    console.log(IS_ENGLISH);
     if(IS_ENGLISH){
         setPolishLanguage();
+        gitHubRedirectButtons.forEach(btn=>{
+            btn.innerHTML = p_github;
+        })
+        inputEmail.setAttribute("placeholder","Adres email");
+        inputTopic.setAttribute("placeholder","Temat");
+        inputDescription.setAttribute("placeholder","Rozwinięcie");
+        submitButton.textContent = "Wyślij";
     }
     else{
         setEnglishLanguage();
+        gitHubRedirectButtons.forEach(btn=>{
+            btn.innerHTML = e_github;
+        })
+        inputEmail.setAttribute("placeholder","E-mail");
+        inputTopic.setAttribute("placeholder","Topic");
+        inputDescription.setAttribute("placeholder","Description");
+        submitButton.textContent = "Send";
     }
+    languageButtonSwitches.forEach(languageSwitch=>{
+        languageSwitch.classList.toggle("active");
+    })
+    languageButtonSwitches2.forEach(languageSwitch=>{
+        languageSwitch.classList.toggle("active");
+    })
     IS_ENGLISH = !IS_ENGLISH;
 }
 
@@ -209,7 +237,7 @@ function validate(event){
 }
 
 form.addEventListener("submit",(event)=>{
-    console.log(validate(event));
+    //console.log(validate(event));
     if(!validate(event)){
         event.preventDefault();
     }
